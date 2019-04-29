@@ -1,14 +1,26 @@
 import React from 'react';
 import { connect } from 'dva';
-import  './News.css';
+import  hc from './News.css';
+import './../../../node_modules/bootstrap/dist/css/bootstrap.css';
 
-function News() {
-  return (
-      <div>新闻页</div>
-  );
+//引入模块
+import Header from './../../components/Header/Header';
+
+class News extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            
+        }
+    }
+
+    render() {
+        return (
+            <div>
+                <Header/>
+                <div className={hc.News}></div>
+            </div>
+        )
 }
-
-News.propTypes = {
-};
-
+}
 export default connect()(News);
